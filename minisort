@@ -1,0 +1,12 @@
+a = [2,12,6,6,5,20,8,9]
+mini = 0
+ai= 0
+for i in range(len(a)-1):
+    mini = a[i]
+    for j in a[i:]:
+        if j < mini:
+            mini = j
+    ai = a.index(mini,i)
+    a[ai]= a[i]
+    a[i]= mini
+print(a)
